@@ -1,0 +1,53 @@
+@keyframes shake-animation {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(var(--shake-x));
+  }
+  75% {
+    transform: translateX(calc(var(--shake-x) * -1));
+  }
+}
+
+.shake-mild {
+  --shake-x: 2px;
+  animation: shake-animation 0.5s infinite;
+  box-shadow: 0 0 5px rgba(239, 68, 68, 0.2);
+}
+
+.shake-medium {
+  --shake-x: 5px;
+  animation: shake-animation 0.3s infinite;
+  box-shadow: 0 0 15px rgba(239, 68, 68, 0.4);
+}
+
+.shake-intense {
+  --shake-x: 8px;
+  animation: shake-animation 0.2s infinite;
+  box-shadow: 0 0 25px rgba(239, 68, 68, 0.6);
+}
+
+/* Add overlay container for the red border effect */
+.danger-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  transition: border-width 0.3s ease;
+}
+
+.danger-overlay.mild {
+  border: 8px solid rgba(239, 68, 68, 0.1);
+}
+
+.danger-overlay.medium {
+  border: 12px solid rgba(239, 68, 68, 0.2);
+}
+
+.danger-overlay.intense {
+  border: 16px solid rgba(239, 68, 68, 0.3);
+}
