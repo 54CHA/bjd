@@ -90,7 +90,7 @@ export const NicknameInput = () => {
           <button
             type="submit"
             disabled={isButtonDisabled}
-            className="w-full px-6 py-3 text-lg font-semibold bg-yellow-500 hover:bg-yellow-600 text-black transition-colors border-2 border-yellow-500 hover:bg-transparent hover:text-yellow-500 hover:border-yellow-500 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="w-full px-6 py-3 text-lg font-semibold bg-yellow-500 text-black transition-colors border-2 border-yellow-500 hover:bg-transparent hover:text-yellow-500 hover:border-yellow-500 disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {isLoading ? (
               <div className="animate-spin rounded-full h-5 w-5 border-2 border-black border-t-transparent mx-auto"></div>

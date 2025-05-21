@@ -182,19 +182,28 @@ export const Game = () => {
                   : "border-red-500 bg-red-500/10"
               }`}
             >
-              <div className="space-y-4">
-                <h2
-                  className={`text-2xl font-bold ${
-                    selectedOption === scenario.correctOption
-                      ? "text-green-500"
-                      : "text-red-500"
-                  }`}
-                >
-                  {selectedOption === scenario.correctOption
-                    ? "Правильно!"
-                    : "Неправильно"}
-                </h2>
+              <h2
+                className={`text-2xl font-bold ${
+                  selectedOption === scenario.correctOption
+                    ? "text-green-500"
+                    : "text-red-500"
+                }`}
+              >
+                {selectedOption === scenario.correctOption
+                  ? "Правильно!"
+                  : "Неправильно"}
+              </h2>
+              
+              {/* Scenario Image */}
+              <div className="flex justify-center my-4">
+                <img 
+                  src={new URL(`../assets/images/${scenario.image}`, import.meta.url).href}
+                  alt={scenario.location}
+                  className="w-full max-w-md h-auto rounded-lg shadow-lg"
+                />
+              </div>
 
+              <div className="space-y-4">
                 {selectedOption !== scenario.correctOption && (
                   <div className="space-y-2">
                     <p className="text-gray-400">Правильный ответ:</p>
@@ -276,6 +285,16 @@ export const Game = () => {
               <h2 className="text-2xl font-bold text-center">
                 {scenario.location}
               </h2>
+              
+              {/* Scenario Image */}
+              <div className="flex justify-center">
+                <img 
+                  src={new URL(`../assets/images/${scenario.image}`, import.meta.url).href}
+                  alt={scenario.location}
+                  className="w-full max-w-md h-auto rounded-lg shadow-lg mb-4"
+                />
+              </div>
+              
               <p className="text-lg text-center text-gray-300">
                 {scenario.description}
               </p>

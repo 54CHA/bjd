@@ -21,7 +21,7 @@ export function Menu() {
       <div className="flex flex-col gap-y-4 w-64">
         <button
           onClick={() => navigate("/nickname")}
-          className="w-full px-6 py-3 text-lg font-semibold bg-yellow-500 hover:bg-yellow-600 text-black transition-colors border-2 border-yellow-500 hover:bg-transparent hover:text-yellow-500 hover:border-yellow-500"
+          className="w-full px-6 py-3 text-lg font-semibold bg-yellow-500 text-black transition-colors border-2 border-yellow-500 hover:bg-transparent hover:text-yellow-500 hover:border-yellow-500"
         >
           Попытать удачу
         </button>

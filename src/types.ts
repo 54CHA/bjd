@@ -16,6 +16,7 @@ export interface Scenario {
     correct: string;
     incorrect: string[];
   };
+  image: string;
 }
 
 export interface LeaderboardEntry {
